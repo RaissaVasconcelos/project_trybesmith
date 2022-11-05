@@ -1,4 +1,4 @@
-export default class FieldInvalids extends Error {
+export default class ErrotHttp extends Error {
   public statusCode: number;
 
   constructor(statusCode: number, message: string) {

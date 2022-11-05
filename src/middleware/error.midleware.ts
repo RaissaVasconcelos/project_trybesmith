@@ -1,5 +1,5 @@
 import { ErrorRequestHandler } from 'express';
-import FieldInvalids from '../errors/Field.invalids';
+import FieldInvalids from '../errors/Error';
 
 const erroMiddleware: ErrorRequestHandler = (err, _req, res, _next) => {
   const { statusCode, message } = err as FieldInvalids;

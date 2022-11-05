@@ -1,8 +1,9 @@
 import LoginModel from '../models/login.models';
 import { ILogin } from '../interfaces/login';
 import createToken from '../utils/jwt.utils';
-import FieldInvalids from '../errors/Field.invalids';
-import schemaLogin from '../utils/validations';
+import schemaLogin from '../utils/validationLogin';
+import ErrotHttp from '../errors/Error';
+import mapError from '../errors/statusCode';
 
 export default class ProductService {
   constructor(private loginModel = new LoginModel()) { }
@@ -10,11 +11,12 @@ export default class ProductService {
   async insert(user: ILogin): Promise<string> {
     const { error } = schemaLogin.validate(user);
 
-    if (error) throw new FieldInvalids(400, error.message);
+    if (error) throw new ErrotHttp(mapError(error.message), error.message);
     
     const result = await this.loginModel.insert(user);
+    
     if (!result) {
-      throw new FieldInvalids(401, 'Username or password invalid');
+      throw new ErrotHttp(401, 'Username or password invalid');
     }
     // gera o token
     const { password, ...rest } = user;
