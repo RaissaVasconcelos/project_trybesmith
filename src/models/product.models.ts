@@ -22,4 +22,11 @@ export default class ProductModel {
     
     return { id: result.insertId, ...product };
   }
+
+  async insertOrderId(orderId: number, id: number) {
+    await this.connection.execute(
+      'UPDATE Trybesmith.Products SET orderId = ? WHERE id = ?',
+      [orderId, id],
+    );
+  }
 }

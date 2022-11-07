@@ -19,7 +19,7 @@ export default class ProductService {
       throw new ErrotHttp(401, 'Username or password invalid');
     }
     // gera o token
-    const { password, ...rest } = user;
+    const { password, ...rest } = result;
     const token = createToken(rest);
     
     return token;

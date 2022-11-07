@@ -15,6 +15,8 @@ export default class UserService {
 
     const result = await this.userModel.insert(user);
 
+    console.log('user', result);
+    
     // gera o token
     const { password, ...rest } = result;
     const token = createToken(rest);

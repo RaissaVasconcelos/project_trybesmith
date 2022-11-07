@@ -5,9 +5,4 @@ const schemaLogin = Joi.object({
   password: Joi.string().required(),
 });
 
-// const schemaProducts = Joi.object({
-//   name: Joi.string().min(2).required(),
-//   amount: Joi.string().min(2).required(),
-// });
-
 export default schemaLogin;

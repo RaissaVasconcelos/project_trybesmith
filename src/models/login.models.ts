@@ -9,7 +9,7 @@ export default class LoginModel {
     const { username, password } = user;
     const [[result]] = await this.connection.execute<(
     ILogin & RowDataPacket)[]>(
-      `SELECT username, password FROM Trybesmith.Users
+      `SELECT * FROM Trybesmith.Users
       WHERE username = ? AND password = ?`,
       [username, password],
       );
