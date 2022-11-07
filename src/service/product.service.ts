@@ -5,7 +5,7 @@ import ErrotHttp from '../errors/Error';
 import mapError from '../errors/statusCode';
 
 export default class ProductService {
-  constructor(private productModel = new ProductModel()) { }
+  private productModel = new ProductModel();
   
   async findAll(): Promise<IProduct[]> {
     return this.productModel.findAll();
@@ -16,8 +16,6 @@ export default class ProductService {
     
     if (error) throw new ErrotHttp(mapError(error.message), error.message);
 
-    const result = this.productModel.insert(product);
-
-    return result;
+    return this.productModel.insert(product);
   }
 }

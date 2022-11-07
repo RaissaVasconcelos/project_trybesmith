@@ -6,7 +6,7 @@ import ErrotHttp from '../errors/Error';
 import mapError from '../errors/statusCode';
 
 export default class ProductService {
-  constructor(private loginModel = new LoginModel()) { }
+  private loginModel = new LoginModel();
   
   async insert(user: ILogin): Promise<string> {
     const { error } = schemaLogin.validate(user);

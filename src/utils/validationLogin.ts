@@ -1,4 +1,5 @@
-import * as Joi from 'types-joi';
+// import * as Joi from 'types-joi';
+import Joi from 'joi';
 
 const schemaLogin = Joi.object({
   username: Joi.string().required(),

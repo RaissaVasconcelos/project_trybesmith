@@ -6,7 +6,7 @@ import ErrotHttp from '../errors/Error';
 import mapError from '../errors/statusCode';
 
 export default class UserService {
-  constructor(public userModel = new UserModel()) {}
+  public userModel = new UserModel();
 
   async insert(user: IUser): Promise<string> {
     const { error } = schemaUsers.validate(user);
@@ -14,8 +14,6 @@ export default class UserService {
     if (error) throw new ErrotHttp(mapError(error.message), error.message);
 
     const result = await this.userModel.insert(user);
-
-    console.log('user', result);
     
     // gera o token
     const { password, ...rest } = result;
