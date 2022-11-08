@@ -8,9 +8,9 @@
 
 ## 💻 Projeto
 
-O projeto tem como objetivo a criação de uma Api com um banco de dados relacionais de produtos e usuários
+O projeto tem como objetivo a criação de uma ApiRest de uma loja de itens medievais 
 
-* Desenvolver operações em CRUD (Create, Read, Update e Delete) de produtos e usuários;
+* Desenvolver uma ApiRest e implementar operações em CRUD (Create, Read, Update e Delete) de produtos e usuários utilizando Typescript;
 
 ## 🚀 Tecnologias
 
