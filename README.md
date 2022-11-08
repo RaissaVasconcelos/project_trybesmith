@@ -10,7 +10,7 @@
 
 O projeto tem como objetivo a criação de uma ApiRest de uma loja de itens medievais utilizando Typescript
 
-* Na Api você pode: 
+* Funcionalidades da API: 
   - Cadastrar um novo usuário
   - Logar o usuário
   - Cadastrar um novo item
