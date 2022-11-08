@@ -8,9 +8,14 @@
 
 ## 💻 Projeto
 
-O projeto tem como objetivo a criação de uma ApiRest de uma loja de itens medievais 
+O projeto tem como objetivo a criação de uma ApiRest de uma loja de itens medievais utilizando Typescript
 
-* Desenvolver uma ApiRest e implementar operações em CRUD (Create, Read, Update e Delete) de produtos e usuários utilizando Typescript;
+* Na Api você pode: 
+  - Cadastrar um novo usuário
+  - Logar o usuário
+  - Cadastrar um novo item
+  - Cadastrar um novo pedido
+  - Listar todos os itens, pedidos e usuários
 
 ## 🚀 Tecnologias
 
