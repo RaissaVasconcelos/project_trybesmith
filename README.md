@@ -1,7 +1,7 @@
 # Projeto - TrybeSmith
 
 
-![image](talker1.png)
+![image](smith.png)
 
 
 ## 
